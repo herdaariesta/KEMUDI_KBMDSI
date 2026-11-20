@@ -1412,6 +1412,18 @@
     </div>
   </div>
 
+  <!-- Floating Zoom Controller (Biar pas di layar kecil / split screen Live Preview) -->
+  <div id="scaleControlBar" class="fixed bottom-4 left-6 z-50 bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-2xl rounded-2xl p-1.5 flex items-center gap-1 text-xs font-semibold text-slate-700 transition-all">
+    <div class="flex items-center gap-1.5 px-2 text-slate-400 text-[11px] font-bold">
+      <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+      <span>Skala Desktop:</span>
+    </div>
+    <button onclick="changePageZoom(0.5, this)" id="zoom-btn-50" class="zoom-btn px-2.5 py-1 rounded-xl hover:bg-slate-100 text-[11px] font-bold transition-all">50%</button>
+    <button onclick="changePageZoom(0.65, this)" id="zoom-btn-65" class="zoom-btn px-2.5 py-1 rounded-xl hover:bg-slate-100 text-[11px] font-bold transition-all">65%</button>
+    <button onclick="changePageZoom(0.8, this)" id="zoom-btn-80" class="zoom-btn px-2.5 py-1 rounded-xl hover:bg-slate-100 text-[11px] font-bold transition-all">80%</button>
+    <button onclick="changePageZoom(1, this)" id="zoom-btn-100" class="zoom-btn active-zoom px-2.5 py-1 rounded-xl bg-kemudi-800 text-white text-[11px] font-bold shadow-xs transition-all">100%</button>
+  </div>
+
   <!-- Toast Notification Pill -->
   <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900 text-white shadow-2xl text-xs font-semibold">
     <i data-lucide="info" id="toastIcon" class="w-4 h-4 text-emerald-400 shrink-0"></i>
