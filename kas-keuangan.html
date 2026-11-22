@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kas, Iuran & Keuangan | KEMUDI HUB KBMDSI</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            kemudi: {
+              50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80',
+              500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d',
+              950: '#052e16', dark: '#064e3b', accent: '#00a86b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .card-gradient-bank { background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%); }
+  </style>
+</head>
+<body class="h-full text-slate-800 antialiased flex flex-col font-sans">
+  <div class="flex h-screen overflow-hidden bg-[#F8FAFC]">
+    
+    <!-- Sidebar -->
+    <aside class="w-72 bg-white border-r border-slate-200/80 flex flex-col justify-between shrink-0 z-30 shadow-sm">
+      <div>
+        <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-800 to-kemudi-600 flex items-center justify-center text-white shadow-md shadow-emerald-900/10">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="font-extrabold text-base tracking-tight text-slate-900">KEMUDI</span>
+                <span class="text-xs font-bold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase tracking-wider">HUB</span>
+              </div>
+              <p class="text-[11px] font-medium text-slate-400 leading-tight">Kabinet ImagiNesa 2026/2027</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-4 py-5">
+          <p class="px-3 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Navigasi Utama</p>
+          <nav class="space-y-1.5">
+            <a href="index.html" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50 transition-colors">
+              <i data-lucide="layout-dashboard" class="w-4 h-4 text-slate-400"></i>
+              <span>Dashboard</span>
+            </a>
+            <a href="index.html" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50 transition-colors">
+              <div class="flex items-center gap-3">
+                <i data-lucide="calendar-check-2" class="w-4 h-4 text-slate-400"></i>
+                <span>Manajemen Proker</span>
+              </div>
+              <span class="text-[10px] bg-slate-100 text-slate-500 font-bold px-2 py-0.5 rounded-full">12</span>
+            </a>
+            <a href="kas-keuangan.html" class="active-nav w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold bg-kemudi-800 text-white shadow-sm transition-all">
+              <div class="flex items-center gap-3">
+                <i data-lucide="wallet-cards" class="w-4 h-4 text-white"></i>
+                <span>Kas & Keuangan</span>
+              </div>
+              <span class="text-[10px] bg-white/20 text-white font-bold px-2 py-0.5 rounded-full">Surplus</span>
+            </a>
+            <a href="index.html" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50">
+              <i data-lucide="file-check" class="w-4 h-4 text-slate-400"></i>
+              <span>Pengajuan LPJ / LAK</span>
+            </a>
+            <a href="index.html" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50">
+              <i data-lucide="user-cog" class="w-4 h-4 text-slate-400"></i>
+              <span>Halaman Profil</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-slate-100 space-y-3 bg-slate-50/50">
+        <div class="p-2.5 rounded-xl bg-white border border-slate-200/80 flex items-center justify-between text-[11px] font-medium text-slate-600">
+          <div class="flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            <span>Server FILKOM UB: <strong class="text-slate-800">Normal</strong></span>
+          </div>
+          <i data-lucide="wifi" class="w-3.5 h-3.5 text-emerald-600"></i>
+        </div>
+
+        <div class="flex items-center gap-3 p-2 rounded-xl bg-white border border-slate-200/70">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Rani" class="w-10 h-10 rounded-full object-cover border border-emerald-500" />
+          <div class="overflow-hidden flex-1 text-xs">
+            <div class="font-bold text-slate-900 truncate">Rani Pratama</div>
+            <div class="text-[11px] text-slate-500 truncate">Sekretaris 1 BPH</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col h-full overflow-hidden">
+      <header class="h-18 px-8 bg-white border-b border-slate-200/80 flex items-center justify-between shrink-0 z-20">
+        <div class="w-96 relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input type="text" placeholder="Cari program kerja, bukti kas, LPJ, PIC..." class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-none focus:ring-1 focus:ring-kemudi-600">
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs font-semibold flex items-center gap-1.5">
+            <i data-lucide="award" class="w-3.5 h-3.5 text-cyan-600"></i>
+            <span>Kabinet ImagiNesa 2026/2027</span>
+          </span>
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Rani" class="w-9 h-9 rounded-full object-cover border border-emerald-600" />
+            <div class="text-left">
+              <div class="text-xs font-bold text-slate-900">Rani Pratama</div>
+              <div class="text-[10px] font-medium text-slate-400">Sekretaris 1 BPH KBMDSI</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1 overflow-y-auto px-8 py-7">
+        <section class="space-y-7 max-w-7xl mx-auto">
+          
+          <!-- Header Kas & Keuangan -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-1.5">
+                <span>KEMUDI FINANCIAL LEDGER</span>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <span>KABINET IMAGINESA 2026/2027</span>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <span class="text-emerald-800 font-bold">Kas, Iuran & Keuangan</span>
+              </div>
+              <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Kas, Iuran & Keuangan Organisasi</h1>
+              <p class="text-xs text-slate-500 mt-1 max-w-2xl leading-relaxed">
+                Transparansi dan pembukuan arus kas riil lima Departemen Sistem Informasi Kabinet ImagiNesa periode kepengurusan 2026/2027.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-3 shrink-0">
+              <a href="index.html" class="px-3.5 py-2.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-bold rounded-xl flex items-center gap-1.5 transition-all shadow-xs">
+                <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+                <span>Ke Manajemen Proker</span>
+              </a>
+              <select class="px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-700 shadow-xs">
+                <option>Periode: Jan - Jun 2026 (Semester Genap)</option>
+              </select>
+              <button onclick="alert('Form input transaksi kas baru')" class="inline-flex items-center gap-2 px-4 py-2.5 bg-kemudi-800 hover:bg-kemudi-900 text-white text-xs font-bold rounded-xl shadow-md transition-all">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+                <span>+ Input Transaksi Baru</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Top 3 Financial Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Total Pemasukan (Inflow)</span>
+                  <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">+18.4% MoM</span>
+                </div>
+                <div class="mt-3 text-3xl font-extrabold text-slate-900">Rp 6.000.000</div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 space-y-1.5 text-xs text-slate-500">
+                <div class="flex justify-between"><span>Iuran Kas Pengurus</span><strong class="text-slate-700">Rp 2.460.000</strong></div>
+                <div class="flex justify-between"><span>Sponsorship & Danus</span><strong class="text-slate-700">Rp 3.540.000</strong></div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Total Pengeluaran (Outflow)</span>
+                  <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-rose-100 text-rose-700">29.1% dari pagu</span>
+                </div>
+                <div class="mt-3 text-3xl font-extrabold text-slate-900">Rp 1.750.000</div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 space-y-1 text-xs text-slate-500">
+                <div class="flex justify-between"><span>Operasional & ATK</span><strong class="text-slate-700">Rp 420.000</strong></div>
+                <div class="flex justify-between"><span>Kesekretariatan</span><strong class="text-slate-700">Rp 510.000</strong></div>
+                <div class="flex justify-between"><span>Konsumsi Pleno</span><strong class="text-slate-700">Rp 820.000</strong></div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Saldo Kas Riil Organisasi</span>
+                  <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-700 text-white">Surplus Sehat</span>
+                </div>
+                <div class="mt-3 text-3xl font-extrabold text-emerald-800">Rp 4.250.000</div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100">
+                <div class="flex justify-between text-xs text-slate-500 mb-1.5">
+                  <span>Giro Mandiri (KBMDSI)</span>
+                  <strong class="text-emerald-700">Rasio 70.8% Aman</strong>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                  <div class="bg-emerald-600 h-2 rounded-full" style="width: 70.8%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content 2 Columns: Mutasi & Chart (8 cols) vs Iuran & Bank Card (4 cols) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <div class="lg:col-span-8 space-y-6">
+              <!-- Buku Mutasi Kas -->
+              <div class="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
+                <div class="p-5 border-b border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div>
+                    <h3 class="text-sm font-extrabold text-slate-900 flex items-center gap-2">
+                      <i data-lucide="book-open" class="w-4 h-4 text-emerald-700"></i>
+                      <span>Buku Mutasi Kas Terkini</span>
+                    </h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Daftar pembukuan arus uang masuk & keluar KBMDSI FILKOM UB</p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="flex items-center bg-slate-100 p-1 rounded-xl text-xs font-bold text-slate-600">
+                      <button class="px-3 py-1 rounded-lg bg-white shadow-xs text-slate-900">Semua (28)</button>
+                      <button class="px-3 py-1 rounded-lg hover:text-slate-900">Masuk (+9)</button>
+                      <button class="px-3 py-1 rounded-lg hover:text-slate-900">Keluar (-19)</button>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr class="border-b border-slate-100 text-[11px] font-bold text-slate-400 uppercase bg-slate-50/50">
+                      <th class="py-3 px-6">Tanggal</th>
+                      <th class="py-3 px-6">Deskripsi & Pihak Terkait</th>
+                      <th class="py-3 px-6 text-center">Jenis</th>
+                      <th class="py-3 px-6 text-right">Nominal</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    <tr class="hover:bg-slate-50">
+                      <td class="py-3.5 px-6 text-slate-500 whitespace-nowrap">24 Mei 2026</td>
+                      <td class="py-3.5 px-6">
+                        <div class="font-bold text-slate-900">Dana Sponsorship Bank Mandiri</div>
+                        <div class="text-[11px] text-slate-400 mt-0.5">Termin 1 Tech Expo KBMDSI x Kerjasama Eksternal</div>
+                      </td>
+                      <td class="py-3.5 px-6 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-100 text-emerald-800">Masuk</span></td>
+                      <td class="py-3.5 px-6 text-right font-mono text-emerald-700 font-extrabold">+ Rp 2.500.000</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="py-3.5 px-6 text-slate-500 whitespace-nowrap">21 Mei 2026</td>
+                      <td class="py-3.5 px-6">
+                        <div class="font-bold text-slate-900">Konsumsi Rapat Pleno 2 Tengah Semester</div>
+                        <div class="text-[11px] text-slate-400 mt-0.5">32 Nasi Box Dapur Kirana Malang x BPH</div>
+                      </td>
+                      <td class="py-3.5 px-6 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-100 text-rose-700">Keluar</span></td>
+                      <td class="py-3.5 px-6 text-right font-mono text-rose-600 font-extrabold">- Rp 525.000</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="py-3.5 px-6 text-slate-500 whitespace-nowrap">18 Mei 2026</td>
+                      <td class="py-3.5 px-6">
+                        <div class="font-bold text-slate-900">Penyetoran Kas Pengurus Tahap 2</div>
+                        <div class="text-[11px] text-slate-400 mt-0.5">14 Anggota Divisi PSDM & Humas</div>
+                      </td>
+                      <td class="py-3.5 px-6 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-100 text-emerald-800">Masuk</span></td>
+                      <td class="py-3.5 px-6 text-right font-mono text-emerald-700 font-extrabold">+ Rp 840.000</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="py-3.5 px-6 text-slate-500 whitespace-nowrap">12 Mei 2026</td>
+                      <td class="py-3.5 px-6">
+                        <div class="font-bold text-slate-900">Pembelian Kertas HVS & Tinta Stempel BPH</div>
+                        <div class="text-[11px] text-slate-400 mt-0.5">Gramedia Mall Olympic Garden (MOG) Malang</div>
+                      </td>
+                      <td class="py-3.5 px-6 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-100 text-rose-700">Keluar</span></td>
+                      <td class="py-3.5 px-6 text-right font-mono text-rose-600 font-extrabold">- Rp 295.000</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="py-3.5 px-6 text-slate-500 whitespace-nowrap">04 Mei 2026</td>
+                      <td class="py-3.5 px-6">
+                        <div class="font-bold text-slate-900">Penjualan Merchandise & Lanyard KBMDSI</div>
+                        <div class="text-[11px] text-slate-400 mt-0.5">Batch 01 Mahasiswa SI 2024 & 2025 x Danus</div>
+                      </td>
+                      <td class="py-3.5 px-6 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-100 text-emerald-800">Masuk</span></td>
+                      <td class="py-3.5 px-6 text-right font-mono text-emerald-700 font-extrabold">+ Rp 1.040.000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Bar Chart Komparasi Arus Kas -->
+              <div class="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs">
+                <div class="flex justify-between items-center mb-4">
+                  <div>
+                    <h3 class="text-sm font-extrabold text-slate-900 flex items-center gap-2">
+                      <i data-lucide="bar-chart-3" class="w-4 h-4 text-emerald-700"></i>
+                      <span>Komparasi Arus Kas Mingguan (Mei 2026)</span>
+                    </h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Perbandingan uang masuk versus pengeluaran per 7 hari kalender</p>
+                  </div>
+                  <div class="flex items-center gap-4 text-xs font-semibold">
+                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-emerald-600"></span> Inflow</span>
+                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-rose-500"></span> Outflow</span>
+                  </div>
+                </div>
+                <div class="h-64 w-full">
+                  <canvas id="standaloneCashflowChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right 4 cols: Iuran & Bank Card -->
+            <div class="lg:col-span-4 space-y-6">
+              <div class="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="users-round" class="w-4 h-4 text-emerald-700"></i>
+                    <h3 class="text-sm font-extrabold text-slate-900">Iuran Pengurus</h3>
+                  </div>
+                  <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-cyan-100 text-cyan-800 uppercase">Mei 2026</span>
+                </div>
+                <p class="text-[11px] text-slate-400">Target wajib: <strong class="text-slate-700">Rp 60.000 / pengurus</strong> untuk pembiayaan operasional himpunan.</p>
+
+                <div class="mt-4 p-4 rounded-xl bg-slate-50/70 border border-slate-100">
+                  <div class="flex justify-between text-xs font-bold text-slate-800 mb-1.5">
+                    <span>41 / 50 Pengurus</span>
+                    <span class="text-emerald-700">82% Terkumpul</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
+                    <div class="bg-emerald-600 h-2.5 rounded-full" style="width: 82%"></div>
+                  </div>
+                  <div class="flex justify-between text-[11px] text-slate-500 mt-2 font-medium">
+                    <span>Terkumpul: <strong class="text-emerald-700">Rp 2.460.000</strong></span>
+                    <span>Sisa: <strong class="text-rose-600">Rp 540.000</strong></span>
+                  </div>
+                </div>
+
+                <div class="mt-4 space-y-2">
+                  <p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Status Pembayaran</p>
+                  <div class="divide-y divide-slate-100 text-xs">
+                    <div class="py-2 flex justify-between items-center">
+                      <div><strong class="text-slate-800">Rani Pratama</strong><div class="text-[10px] text-slate-400">Sekretaris 1 BPH</div></div>
+                      <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-[10px]">✓ Lunas</span>
+                    </div>
+                    <div class="py-2 flex justify-between items-center">
+                      <div><strong class="text-slate-800">Fakhri Al-Ghofiqi</strong><div class="text-[10px] text-slate-400">Kadiv Keilmuan</div></div>
+                      <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-[10px]">✓ Lunas</span>
+                    </div>
+                    <div class="py-2 flex justify-between items-center">
+                      <div><strong class="text-slate-800">Bagas Raditya</strong><div class="text-[10px] text-slate-400">Staf Dept. Pengmas</div></div>
+                      <span class="px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 font-extrabold text-[10px]">Belum Bayar</span>
+                    </div>
+                    <div class="py-2 flex justify-between items-center">
+                      <div><strong class="text-slate-800">Annisa Nabila</strong><div class="text-[10px] text-slate-400">Kadiv PSDM</div></div>
+                      <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-[10px]">✓ Lunas</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rekening Card & QRIS -->
+              <div class="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="landmark" class="w-4 h-4 text-emerald-700"></i>
+                  <h3 class="text-sm font-extrabold text-slate-900">Rekening Resmi KBMDSI</h3>
+                </div>
+
+                <div class="card-gradient-bank p-5 rounded-2xl text-white shadow-lg">
+                  <div class="flex justify-between mb-4 text-xs font-extrabold uppercase">
+                    <span>Bank Mandiri (Giro)</span>
+                    <i data-lucide="credit-card" class="w-5 h-5"></i>
+                  </div>
+                  <div class="text-[10px] uppercase font-semibold opacity-75">KBMDSI FILKOM UNIVERSITAS BRAWIJAYA</div>
+                  <div class="mt-2 text-lg font-mono font-bold tracking-widest flex justify-between items-center">
+                    <span>144-00-2983741-2</span>
+                    <button onclick="navigator.clipboard.writeText('144-00-2983741-2'); alert('Nomor rekening Mandiri disalin!')" class="p-1 rounded bg-white/20 hover:bg-white/30 text-white">
+                      <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 text-center flex flex-col items-center">
+                  <div class="text-xs font-bold text-slate-800 mb-2">QRIS Standar Nasional KBMDSI</div>
+                  <div class="w-32 h-32 bg-white p-2 rounded-xl border border-slate-200 shadow-xs flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-slate-900 fill-current">
+                      <rect x="5" y="5" width="25" height="25" rx="3" fill="#064e3b" />
+                      <rect x="9" y="9" width="17" height="17" fill="white" />
+                      <rect x="13" y="13" width="9" height="9" fill="#064e3b" />
+                      <rect x="70" y="5" width="25" height="25" rx="3" fill="#064e3b" />
+                      <rect x="74" y="9" width="17" height="17" fill="white" />
+                      <rect x="78" y="13" width="9" height="9" fill="#064e3b" />
+                      <rect x="5" y="70" width="25" height="25" rx="3" fill="#064e3b" />
+                      <rect x="9" y="74" width="17" height="17" fill="white" />
+                      <rect x="13" y="78" width="9" height="9" fill="#064e3b" />
+                      <rect x="36" y="36" width="28" height="28" rx="4" fill="#059669" />
+                      <text x="50" y="54" font-size="10" font-weight="bold" fill="white" text-anchor="middle" font-family="sans-serif">KBM</text>
+                      <rect x="35" y="8" width="8" height="8" fill="#14532d" />
+                      <rect x="70" y="36" width="8" height="15" fill="#14532d" />
+                      <rect x="42" y="82" width="18" height="10" fill="#14532d" />
+                    </svg>
+                  </div>
+                  <p class="text-[10px] text-slate-500 mt-2 font-medium">BCA, GoPay, OVO, ShopeePay & Livin Mandiri</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+    const ctx = document.getElementById('standaloneCashflowChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Minggu 1', 'Minggu 2', 'Minggu 3', 'Minggu 4'],
+          datasets: [
+            { label: 'Inflow', data: [1200000, 850000, 1050000, 2500000], backgroundColor: '#059669', borderRadius: 6 },
+            { label: 'Outflow', data: [450000, 970000, 920000, 720000], backgroundColor: '#f43f5e', borderRadius: 6 }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false } },
+            y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => 'Rp ' + (v/1000000).toFixed(1) + ' jt' } }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

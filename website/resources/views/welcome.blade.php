@@ -340,19 +340,19 @@
               </div>
             </div>
 
-            <!-- Stat 4: Pagu Terserap -->
-            <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs hover:shadow-card transition-all flex flex-col justify-between">
+            <!-- Stat 4: Pagu Terserap (Terkoneksi ke Kas & Keuangan) -->
+            <div onclick="switchTab('keuangan')" class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs hover:shadow-card hover:border-emerald-300 cursor-pointer transition-all flex flex-col justify-between group" title="Klik untuk membuka Kas & Keuangan">
               <div class="flex items-center justify-between">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Pagu Terserap</span>
-                <div class="w-9 h-9 rounded-xl bg-lime-50 text-lime-700 flex items-center justify-center">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-emerald-800 transition-colors">Pagu Terserap</span>
+                <div class="w-9 h-9 rounded-xl bg-lime-50 text-lime-700 flex items-center justify-center group-hover:bg-emerald-100 group-hover:text-emerald-800 transition-colors">
                   <i data-lucide="pie-chart" class="w-4 h-4"></i>
                 </div>
               </div>
               <div class="mt-3">
                 <div class="text-3xl font-extrabold text-slate-900">72.1%</div>
-                <div class="flex items-center gap-1.5 mt-2 text-xs font-medium text-slate-500">
-                  <span>Rp 18.450.000</span>
-                  <span class="text-slate-400">/ 25.59M</span>
+                <div class="flex items-center justify-between gap-1.5 mt-2 text-xs font-medium text-slate-500">
+                  <span>Rp 18.450.000 <span class="text-slate-400">/ 25.59M</span></span>
+                  <span class="text-[10px] font-bold text-emerald-700 group-hover:text-emerald-900 flex items-center gap-0.5">Buku Kas <i data-lucide="arrow-right" class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"></i></span>
                 </div>
               </div>
             </div>
@@ -526,13 +526,19 @@
                   </div>
 
                   <!-- Step 02 -->
-                  <div class="p-3.5 rounded-xl border border-slate-100 bg-slate-50/60 hover:bg-emerald-50/30 hover:border-emerald-200 transition-all">
-                    <div class="flex items-center justify-between mb-1.5">
-                      <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-800 font-extrabold text-xs flex items-center justify-center">02</span>
-                      <i data-lucide="banknote" class="w-4 h-4 text-emerald-600"></i>
+                  <div class="p-3.5 rounded-xl border border-slate-100 bg-slate-50/60 hover:bg-emerald-50/30 hover:border-emerald-200 transition-all flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-1.5">
+                        <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-800 font-extrabold text-xs flex items-center justify-center">02</span>
+                        <i data-lucide="banknote" class="w-4 h-4 text-emerald-600"></i>
+                      </div>
+                      <h4 class="text-xs font-bold text-slate-900">Pencairan Dana Termin 70%</h4>
+                      <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">Bendahara Umum mencairkan cek operasional setelah paraf SPJ lewat dekanat.</p>
                     </div>
-                    <h4 class="text-xs font-bold text-slate-900">Pencairan Dana Termin 70%</h4>
-                    <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">Bendahara Umum mencairkan cek operasional setelah paraf SPJ lewat dekanat.</p>
+                    <button onclick="switchTab('keuangan')" class="mt-2 text-[10px] font-bold text-emerald-800 hover:text-emerald-950 flex items-center gap-1 self-start">
+                      <span>Cek Buku Kas Bendahara</span>
+                      <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                    </button>
                   </div>
 
                   <!-- Step 03 -->
@@ -672,6 +678,10 @@
 
             <!-- Top Actions -->
             <div class="flex items-center gap-3 shrink-0">
+              <button onclick="switchTab('proker')" class="px-3 py-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-bold rounded-xl flex items-center gap-1.5 transition-all">
+                <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+                <span>Ke Manajemen Proker</span>
+              </button>
               <div class="relative">
                 <select id="periodFilterSelect" onchange="filterFinancePeriod(this.value)" class="px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-700 shadow-xs focus:outline-none focus:ring-1 focus:ring-kemudi-600">
                   <option value="2026-genap">Periode: Jan - Jun 2026 (Semester Genap)</option>

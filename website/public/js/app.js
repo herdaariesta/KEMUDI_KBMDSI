@@ -300,9 +300,14 @@ function renderProkerTable(items) {
         </td>
 
         <td class="py-4 px-6 text-right">
-          <button onclick="detailProker(${item.id})" class="p-1.5 text-slate-400 hover:text-kemudi-800 hover:bg-slate-100 rounded-lg transition-colors" title="Lihat Detail">
-            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-          </button>
+          <div class="flex items-center justify-end gap-1">
+            <button onclick="goToKasForProker('${item.name}')" class="p-1.5 text-slate-400 hover:text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors" title="Lihat Arus Kas Terkait">
+              <i data-lucide="wallet" class="w-4 h-4"></i>
+            </button>
+            <button onclick="detailProker(${item.id})" class="p-1.5 text-slate-400 hover:text-kemudi-800 hover:bg-slate-100 rounded-lg transition-colors" title="Lihat Detail Proker">
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </button>
+          </div>
         </td>
       </tr>
     `;
@@ -702,6 +707,11 @@ window.addEventListener('load', () => {
     }
   }
 });
+
+function goToKasForProker(name) {
+  switchTab('keuangan');
+  showToast(`Membuka buku kas terkait: "${name}"`, 'success');
+}
 
 function detailProker(id) {
   const item = prokerList.find(p => p.id === id);
