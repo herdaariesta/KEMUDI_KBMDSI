@@ -10,7 +10,7 @@ Implementasi halaman web responsif desktop berbasis Figma Design Sistem Informas
 
 ---
 
-## 🌟 Fitur Utama
+##  Fitur Utama
 
 1. **Desain Desktop Responsif & Proporsional**:
    - Disesuaikan khusus untuk resolusi desktop (1280px, 1440px, hingga 1920px widescreen).
@@ -37,7 +37,7 @@ Implementasi halaman web responsif desktop berbasis Figma Design Sistem Informas
 
 ---
 
-## 🚀 Cara Menjalankan
+##  Cara Menjalankan
 
 ### Opsi 1: Langsung Buka di Browser
 Anda cukup membuka file `index.html` langsung di browser:
