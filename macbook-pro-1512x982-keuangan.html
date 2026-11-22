@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1512, height=982, initial-scale=1.0">
-  <title>KEMUDI HUB | MacBook Pro 1512 x 982 - Kas & Keuangan</title>
+  <title>KEMUDI HUB | Kas, Iuran & Keuangan - Kabinet Imaginera</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +14,34 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
           colors: {
             kemudi: {
-              50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80',
-              500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d',
-              dark: '#064e3b',
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              dark: '#0e3a20',
             }
           }
         }
       }
     }
   </script>
+
   <style>
-    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
     html, body {
       width: 1512px;
       height: 982px;
@@ -39,162 +53,258 @@
       color: #1E293B;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .card-gradient-bank { background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%); }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Root Canvas: EXACTLY 1512px x 982px (Zero Overflow) -->
+  <!-- Root Canvas: EXACTLY 1512px x 982px -->
   <div style="width: 1512px; height: 982px;" class="flex bg-[#F8FAFC] overflow-hidden">
-    
-    <!-- Sidebar 260px x 982px -->
+
+    <!-- ==================== SIDEBAR (260px x 982px) ==================== -->
     <aside style="width: 260px; height: 982px;" class="bg-white border-r border-slate-200/80 flex flex-col justify-between shrink-0 p-5">
       <div>
+        <!-- Top Logo -->
         <div class="pb-4 border-b border-slate-100 flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-900 to-emerald-600 flex items-center justify-center text-white shadow-md font-extrabold text-sm">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#0e3a20] to-emerald-600 flex items-center justify-center text-white shadow-md font-extrabold text-sm">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-              <circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
             </svg>
           </div>
           <div>
             <div class="flex items-center gap-1.5">
               <span class="font-extrabold text-sm tracking-tight text-slate-900">KEMUDI</span>
-              <span class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800">HUB</span>
+              <span class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 tracking-wider">HUB</span>
             </div>
-            <p class="text-[10px] font-medium text-slate-400">Kabinet ImagiNesa 2026/2027</p>
+            <p class="text-[10px] font-medium text-slate-400">Kabinet Imaginera 2026/2027</p>
           </div>
         </div>
 
+        <!-- Navigation Menu -->
         <div class="py-4">
-          <p class="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Navigasi Utama</p>
-          <nav class="space-y-1 text-xs font-semibold">
-            <a href="#" class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-50">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <p class="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">NAVIGASI UTAMA</p>
+          <nav class="space-y-1 text-xs">
+            
+            <a href="macbook-pro-1512x982-proker.html" class="w-full flex items-center gap-3 px-3 py-2 rounded-xl font-semibold text-slate-600 hover:bg-slate-50">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400">
+                <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
               <span>Dashboard</span>
             </a>
-            <a href="macbook-pro-1512x982-proker.html" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-50">
+
+            <a href="macbook-pro-1512x982-proker.html" class="w-full flex items-center justify-between px-3 py-2 rounded-xl font-semibold text-slate-600 hover:bg-slate-50">
               <div class="flex items-center gap-3">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400">
+                  <path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path>
+                </svg>
                 <span>Manajemen Proker</span>
               </div>
-              <span class="text-[9px] bg-slate-100 text-slate-500 font-bold px-2 py-0.5 rounded-full">12</span>
+              <span class="text-[9px] bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded-full">12</span>
             </a>
+
             <!-- Active: Kas & Keuangan -->
             <a href="macbook-pro-1512x982-keuangan.html" class="w-full flex items-center justify-between px-3 py-2 rounded-xl font-bold bg-[#14532d] text-white shadow-sm">
               <div class="flex items-center gap-3">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="text-white"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="text-white">
+                  <rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line>
+                </svg>
                 <span>Kas & Keuangan</span>
               </div>
-              <span class="text-[9px] bg-white/20 text-white font-bold px-2 py-0.5 rounded-full">Surplus</span>
+              <span class="text-[9px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">Surplus</span>
             </a>
-            <a href="#" class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-50">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+
+            <a href="#" class="w-full flex items-center gap-3 px-3 py-2 rounded-xl font-semibold text-slate-600 hover:bg-slate-50">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path>
+              </svg>
               <span>Pengajuan LPJ / LAK</span>
             </a>
-            <a href="#" class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-50">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg>
+
+            <a href="#" class="w-full flex items-center gap-3 px-3 py-2 rounded-xl font-semibold text-slate-600 hover:bg-slate-50">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400">
+                <circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 1 0-16 0"></path>
+              </svg>
               <span>Halaman Profil</span>
             </a>
+
           </nav>
         </div>
       </div>
 
+      <!-- Bottom Profile Card: Jason Pratama (Bendahara 1 BPH) -->
       <div class="space-y-2.5 pt-3 border-t border-slate-100">
-        <div class="p-2 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-[10px] font-medium text-slate-600">
-          <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span><span>Server: <strong>Normal</strong></span></div>
+        <div class="p-2 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-between text-[10px] font-medium text-slate-600">
+          <div class="flex items-center gap-2">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+            <span>Server: <strong class="text-slate-800">Normal</strong></span>
+          </div>
           <span class="text-emerald-700 font-bold">FILKOM UB</span>
         </div>
-        <div class="flex items-center gap-2.5 p-2 rounded-xl bg-white border border-slate-200">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Rani" class="w-8 h-8 rounded-full object-cover border border-emerald-600" />
-          <div class="overflow-hidden flex-1 text-xs"><div class="font-bold text-slate-900 truncate text-[11px]">Rani Pratama</div><div class="text-[9px] text-slate-400 truncate">Sekretaris 1 BPH</div></div>
+
+        <div class="flex items-center gap-2.5 p-2 rounded-xl bg-white border border-slate-200/80 shadow-xs">
+          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&h=120&q=80" 
+               alt="Jason Pratama" 
+               class="w-8 h-8 rounded-full object-cover border border-emerald-600 ring-2 ring-emerald-50" />
+          <div class="overflow-hidden flex-1 text-xs">
+            <div class="font-bold text-slate-900 truncate text-[11px]">Jason Pratama</div>
+            <div class="text-[9px] text-slate-400 truncate">Bendahara 1 BPH</div>
+          </div>
         </div>
       </div>
     </aside>
 
-    <!-- Main Content 1252px x 982px -->
+    <!-- ==================== MAIN CONTENT (1252px x 982px) ==================== -->
     <div style="width: 1252px; height: 982px;" class="flex flex-col bg-[#F8FAFC]">
+      
+      <!-- Top Header Bar (56px) -->
       <header style="height: 56px;" class="px-7 bg-white border-b border-slate-200/80 flex items-center justify-between shrink-0">
         <div class="w-88 relative">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" placeholder="Cari program kerja, bukti kas, LPJ, PIC..." class="w-full pl-9 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400 absolute left-3 top-1/2 -translate-y-1/2">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" 
+                 placeholder="Cari program kerja, bukti ka" 
+                 class="w-full pl-9 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-emerald-700 focus:bg-white transition-all">
         </div>
+
         <div class="flex items-center gap-4">
-          <span class="px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-[11px] font-semibold">Kabinet ImagiNesa 2026/2027</span>
+          <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200/80 text-cyan-800 text-[11px] font-semibold">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-cyan-600">
+              <circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+            </svg>
+            <span>Kabinet Imaginera 2026/2027</span>
+          </div>
+
           <div class="flex items-center gap-2">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Rani" class="w-7 h-7 rounded-full object-cover border border-emerald-600" />
-            <span class="font-bold text-slate-900 text-[11px]">Rani Pratama</span>
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&h=120&q=80" 
+                 alt="Jason Pratama" 
+                 class="w-7 h-7 rounded-full object-cover border border-emerald-600 ring-2 ring-emerald-50" />
+            <div class="text-left text-xs">
+              <span class="font-bold text-slate-900 text-[11px]">Jason Pratama</span>
+            </div>
           </div>
         </div>
       </header>
 
+      <!-- Exact Height Main Container (926px = 982px - 56px) -->
       <main style="height: 926px;" class="p-6 flex flex-col justify-between overflow-hidden">
+        
+        <!-- Section 1: Page Header -->
         <div class="flex items-center justify-between shrink-0">
           <div>
-            <div class="text-[11px] font-semibold text-slate-400 mb-0.5">KEMUDI FINANCIAL LEDGER › KABINET IMAGINESA 2026/2027 › <span class="text-emerald-800 font-bold">Kas & Keuangan</span></div>
-            <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">Kas, Iuran & Keuangan Organisasi</h1>
-            <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">Transparansi dan pembukuan arus kas riil lima Departemen Sistem Informasi Kabinet ImagiNesa periode kepengurusan 2026/2027.</p>
+            <div class="flex items-center gap-1.5 text-[11px] font-semibold text-slate-400 mb-0.5">
+              <span>KEMUDI FINANCIAL</span>
+              <span>›</span>
+              <span>Kabinet Imaginera 2026/2027</span>
+              <span>›</span>
+              <span class="text-emerald-800 font-bold">Kas & Keuangan</span>
+            </div>
+            <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">Kas, Iuran & Keuangan KBMDSI IMAGINERA</h1>
+            <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">
+              Transparansi Keuangan Departemen Sistem Informasi Kabinet Imaginera periode kepengurusan 2026/2027.
+            </p>
           </div>
+
           <div class="flex items-center gap-2.5 shrink-0">
-            <a href="macbook-pro-1512x982-proker.html" class="px-3 py-1.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-bold rounded-xl flex items-center gap-1">
-              ← Ke Manajemen Proker
+            <a href="macbook-pro-1512x982-proker.html" class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-bold rounded-xl shadow-xs transition-all">
+              <span>← Ke Manajemen Proker</span>
             </a>
-            <select class="px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-700 shadow-xs">
-              <option>Periode: Jan - Jun 2026 (Semester Genap)</option>
-            </select>
-            <button class="px-3.5 py-1.5 bg-[#14532d] hover:bg-emerald-950 text-white text-xs font-bold rounded-xl shadow-sm">+ Input Transaksi</button>
+            
+            <div class="relative">
+              <select class="appearance-none pl-3.5 pr-8 py-2 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-xl shadow-xs cursor-pointer focus:outline-none focus:ring-1 focus:ring-emerald-700">
+                <option>Periode: Juni - Desember 2026</option>
+              </select>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+
+            <button class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#14532d] hover:bg-emerald-950 text-white text-xs font-bold rounded-xl shadow-sm transition-all">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              <span>+ Input Transaksi</span>
+            </button>
           </div>
         </div>
 
-        <!-- 3 Financial Cards (Compact ~115px) -->
-        <div class="grid grid-cols-3 gap-4 shrink-0">
-          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <!-- Section 2: 3 Financial Metrics Cards (~115px) -->
+        <div class="grid grid-cols-3 gap-5 shrink-0">
+          
+          <!-- Card 1: Total Pemasukan -->
+          <div class="bg-white rounded-xl p-4 border border-slate-200/80 shadow-xs flex flex-col justify-between">
             <div class="flex justify-between items-center">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Total Pemasukan (Inflow)</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">TOTAL PEMASUKAN (INFLOW)</span>
               <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">+18.4% MoM</span>
             </div>
-            <div class="mt-1 text-2xl font-extrabold text-slate-900">Rp 6.000.000</div>
-            <div class="mt-2 pt-2 border-t border-slate-100 space-y-1 text-[11px] text-slate-500">
-              <div class="flex justify-between"><span>Iuran Kas Pengurus</span><strong class="text-slate-700">Rp 2.460.000</strong></div>
-              <div class="flex justify-between"><span>Sponsorship & Danus</span><strong class="text-slate-700">Rp 3.540.000</strong></div>
+            <div class="mt-1 text-2xl font-extrabold text-slate-900 leading-none">Rp 6.000.000</div>
+            <div class="mt-2.5 pt-2 border-t border-slate-100 space-y-1 text-[11px] text-slate-500">
+              <div class="flex justify-between">
+                <span>Iuran Kas Pengurus</span>
+                <strong class="text-slate-700">Rp 2.460.000</strong>
+              </div>
+              <div class="flex justify-between">
+                <span>Sponsorship & Danus</span>
+                <strong class="text-slate-700">Rp 3.540.000</strong>
+              </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+          <!-- Card 2: Total Pengeluaran -->
+          <div class="bg-white rounded-xl p-4 border border-slate-200/80 shadow-xs flex flex-col justify-between">
             <div class="flex justify-between items-center">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Total Pengeluaran (Outflow)</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">TOTAL PENGELUARAN (OUTFLOW)</span>
               <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-rose-100 text-rose-700">29.1% dari pagu</span>
             </div>
-            <div class="mt-1 text-2xl font-extrabold text-slate-900">Rp 1.750.000</div>
-            <div class="mt-2 pt-2 border-t border-slate-100 space-y-0.5 text-[11px] text-slate-500">
-              <div class="flex justify-between"><span>Operasional & ATK</span><strong class="text-slate-700">Rp 420.000</strong></div>
-              <div class="flex justify-between"><span>Konsumsi Rapat Pleno</span><strong class="text-slate-700">Rp 820.000</strong></div>
+            <div class="mt-1 text-2xl font-extrabold text-slate-900 leading-none">Rp 1.750.000</div>
+            <div class="mt-2.5 pt-2 border-t border-slate-100 space-y-1 text-[11px] text-slate-500">
+              <div class="flex justify-between">
+                <span>Operasional & ATK</span>
+                <strong class="text-slate-700">Rp 420.000</strong>
+              </div>
+              <div class="flex justify-between">
+                <span>Konsumsi Rapat Pleno</span>
+                <strong class="text-slate-700">Rp 820.000</strong>
+              </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+          <!-- Card 3: Saldo Kas Riil -->
+          <div class="bg-white rounded-xl p-4 border border-slate-200/80 shadow-xs flex flex-col justify-between">
             <div class="flex justify-between items-center">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Saldo Kas Riil Organisasi</span>
-              <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-700 text-white">Surplus Sehat</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">SALDO KAS RIIL ORGANISASI</span>
+              <span class="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-[#14532d] text-white">Surplus Sehat</span>
             </div>
-            <div class="mt-1 text-2xl font-extrabold text-emerald-800">Rp 4.250.000</div>
-            <div class="mt-2 pt-2 border-t border-slate-100">
-              <div class="flex justify-between text-[11px] text-slate-500 mb-1">
+            <div class="mt-1 text-2xl font-extrabold text-slate-900 leading-none">Rp 4.250.000</div>
+            <div class="mt-2.5 pt-2 border-t border-slate-100">
+              <div class="flex justify-between text-[11px] text-slate-500 mb-1.5">
                 <span>Giro Mandiri (KBMDSI)</span>
-                <strong class="text-emerald-700">Rasio 70.8% Aman</strong>
+                <strong class="text-emerald-700 font-bold">Rasio 70.8% Aman</strong>
               </div>
-              <div class="w-full bg-slate-100 rounded-full h-1.5">
+              <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
                 <div class="bg-emerald-600 h-1.5 rounded-full" style="width: 70.8%"></div>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- 2 Columns: Mutasi & Chart (8 cols) vs Iuran & Bank Card (4 cols) (~620px) -->
-        <div class="grid grid-cols-12 gap-5 shrink-0">
+        <!-- Section 3: Lower 2-Column Section (65% vs 35%) (~640px) -->
+        <div class="grid grid-cols-12 gap-5 shrink-0 items-start">
+          
+          <!-- LEFT COLUMN (col-span-8) -->
           <div class="col-span-8 space-y-4">
-            <!-- Mutasi Table -->
-            <div class="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
-              <div class="p-3.5 border-b border-slate-100 flex justify-between items-center">
+            
+            <!-- Card 1: Buku Mutasi Kas Terkini -->
+            <div class="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
+              <div class="p-3.5 px-4 border-b border-slate-100 flex justify-between items-center">
                 <div>
                   <h3 class="text-xs font-extrabold text-slate-900">Buku Mutasi Kas Terkini</h3>
                   <p class="text-[10px] text-slate-400">Daftar arus kas masuk & keluar KBMDSI</p>
@@ -209,178 +319,215 @@
               <table class="w-full text-left border-collapse text-xs">
                 <thead>
                   <tr class="border-b border-slate-100 text-[10px] font-bold text-slate-400 uppercase bg-slate-50/50">
-                    <th class="py-2 px-4">Tanggal</th>
-                    <th class="py-2 px-4">Deskripsi & Pihak Terkait</th>
-                    <th class="py-2 px-4 text-center">Jenis</th>
-                    <th class="py-2 px-4 text-right">Nominal</th>
+                    <th class="py-2.5 px-4">TANGGAL</th>
+                    <th class="py-2.5 px-4">DESKRIPSI & PIHAK TERKAIT</th>
+                    <th class="py-2.5 px-4 text-center">JENIS</th>
+                    <th class="py-2.5 px-4 text-right">NOMINAL</th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100 text-slate-700">
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-2 px-4 text-slate-500 whitespace-nowrap text-[11px]">24 Mei 2026</td>
-                    <td class="py-2 px-4">
-                      <div class="font-bold text-slate-900 text-xs">Dana Sponsorship Bank Mandiri</div>
+                  
+                  <!-- Row 1: Dana Sponsorship -->
+                  <tr class="hover:bg-slate-50/80 transition-colors">
+                    <td class="py-2.5 px-4 text-slate-500 whitespace-nowrap text-[11px] font-medium">24 Mei 2026</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-extrabold text-slate-900 text-xs">Dana Sponsorship Bank Mandiri</div>
                       <div class="text-[10px] text-slate-400">Termin 1 Tech Expo KBMDSI</div>
                     </td>
-                    <td class="py-2 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-emerald-100 text-emerald-800">Masuk</span></td>
-                    <td class="py-2 px-4 text-right font-mono text-emerald-700 font-extrabold text-xs">+ Rp 2.500.000</td>
+                    <td class="py-2.5 px-4 text-center">
+                      <span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-emerald-100 text-emerald-800">Masuk</span>
+                    </td>
+                    <td class="py-2.5 px-4 text-right font-extrabold text-emerald-700 text-xs">+ Rp 2.500.000</td>
                   </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-2 px-4 text-slate-500 whitespace-nowrap text-[11px]">21 Mei 2026</td>
-                    <td class="py-2 px-4">
-                      <div class="font-bold text-slate-900 text-xs">Konsumsi Rapat Pleno 2</div>
+
+                  <!-- Row 2: Konsumsi Rapat Pleno 2 -->
+                  <tr class="hover:bg-slate-50/80 transition-colors">
+                    <td class="py-2.5 px-4 text-slate-500 whitespace-nowrap text-[11px] font-medium">21 Mei 2026</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-extrabold text-slate-900 text-xs">Konsumsi Rapat Pleno 2</div>
                       <div class="text-[10px] text-slate-400">32 Nasi Box Dapur Kirana x BPH</div>
                     </td>
-                    <td class="py-2 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-rose-100 text-rose-700">Keluar</span></td>
-                    <td class="py-2 px-4 text-right font-mono text-rose-600 font-extrabold text-xs">- Rp 525.000</td>
+                    <td class="py-2.5 px-4 text-center">
+                      <span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-rose-100 text-rose-700">Keluar</span>
+                    </td>
+                    <td class="py-2.5 px-4 text-right font-extrabold text-rose-600 text-xs">- Rp 525.000</td>
                   </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-2 px-4 text-slate-500 whitespace-nowrap text-[11px]">18 Mei 2026</td>
-                    <td class="py-2 px-4">
-                      <div class="font-bold text-slate-900 text-xs">Penyetoran Kas Pengurus Tahap 2</div>
+
+                  <!-- Row 3: Penyetoran Kas Pengurus -->
+                  <tr class="hover:bg-slate-50/80 transition-colors">
+                    <td class="py-2.5 px-4 text-slate-500 whitespace-nowrap text-[11px] font-medium">18 Mei 2026</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-extrabold text-slate-900 text-xs">Penyetoran Kas Pengurus Tahap 2</div>
                       <div class="text-[10px] text-slate-400">14 Anggota PSDM & Humas</div>
                     </td>
-                    <td class="py-2 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-emerald-100 text-emerald-800">Masuk</span></td>
-                    <td class="py-2 px-4 text-right font-mono text-emerald-700 font-extrabold text-xs">+ Rp 840.000</td>
+                    <td class="py-2.5 px-4 text-center">
+                      <span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-emerald-100 text-emerald-800">Masuk</span>
+                    </td>
+                    <td class="py-2.5 px-4 text-right font-extrabold text-emerald-700 text-xs">+ Rp 840.000</td>
                   </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-2 px-4 text-slate-500 whitespace-nowrap text-[11px]">12 Mei 2026</td>
-                    <td class="py-2 px-4">
-                      <div class="font-bold text-slate-900 text-xs">Kertas HVS & Tinta Stempel</div>
+
+                  <!-- Row 4: Kertas HVS & Tinta Stempel -->
+                  <tr class="hover:bg-slate-50/80 transition-colors">
+                    <td class="py-2.5 px-4 text-slate-500 whitespace-nowrap text-[11px] font-medium">12 Mei 2026</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-extrabold text-slate-900 text-xs">Kertas HVS & Tinta Stempel</div>
                       <div class="text-[10px] text-slate-400">Gramedia Mall Olympic Garden</div>
                     </td>
-                    <td class="py-2 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-rose-100 text-rose-700">Keluar</span></td>
-                    <td class="py-2 px-4 text-right font-mono text-rose-600 font-extrabold text-xs">- Rp 295.000</td>
+                    <td class="py-2.5 px-4 text-center">
+                      <span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-rose-100 text-rose-700">Keluar</span>
+                    </td>
+                    <td class="py-2.5 px-4 text-right font-extrabold text-rose-600 text-xs">- Rp 295.000</td>
                   </tr>
+
                 </tbody>
               </table>
             </div>
 
-            <!-- Visual Bar Comparison Widget -->
-            <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-xs">
-              <div class="flex justify-between items-center mb-2">
+            <!-- Card 2: Komparasi Arus Kas Mingguan -->
+            <div class="bg-white rounded-xl border border-slate-200/80 p-4 shadow-xs">
+              <div class="flex justify-between items-center mb-3">
                 <div>
                   <h3 class="text-xs font-extrabold text-slate-900">Komparasi Arus Kas Mingguan (Mei 2026)</h3>
                   <p class="text-[10px] text-slate-400">Inflow vs Outflow per 7 hari kalender</p>
                 </div>
-                <div class="flex items-center gap-3 text-[11px] font-semibold">
-                  <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-emerald-600"></span> Inflow</span>
-                  <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-rose-500"></span> Outflow</span>
+                <div class="flex items-center gap-3 text-[11px] font-semibold text-slate-600">
+                  <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span> Inflow</span>
+                  <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span> Outflow</span>
                 </div>
               </div>
 
-              <div class="h-28 w-full flex items-end justify-around border-b border-slate-100 pb-2 pt-2">
-                <div class="flex flex-col items-center gap-1">
-                  <div class="flex items-end gap-1.5 h-20">
-                    <div style="height: 48px;" class="w-6 bg-emerald-600 rounded-t"></div>
-                    <div style="height: 20px;" class="w-6 bg-rose-500 rounded-t"></div>
+              <!-- Bar chart exactly matching Screenshot -->
+              <div class="h-32 w-full flex items-end justify-around border-b border-slate-100 pb-2 pt-1">
+                
+                <!-- Minggu 1 -->
+                <div class="flex flex-col items-center gap-1.5">
+                  <div class="flex items-end gap-1.5 h-24">
+                    <div style="height: 56px;" class="w-6 bg-emerald-600 rounded-t"></div>
+                    <div style="height: 24px;" class="w-6 bg-rose-500 rounded-t"></div>
                   </div>
                   <span class="text-[10px] font-bold text-slate-500">Minggu 1</span>
                 </div>
-                <div class="flex flex-col items-center gap-1">
-                  <div class="flex items-end gap-1.5 h-20">
-                    <div style="height: 35px;" class="w-6 bg-emerald-600 rounded-t"></div>
-                    <div style="height: 40px;" class="w-6 bg-rose-500 rounded-t"></div>
+
+                <!-- Minggu 2 -->
+                <div class="flex flex-col items-center gap-1.5">
+                  <div class="flex items-end gap-1.5 h-24">
+                    <div style="height: 40px;" class="w-6 bg-emerald-600 rounded-t"></div>
+                    <div style="height: 48px;" class="w-6 bg-rose-500 rounded-t"></div>
                   </div>
                   <span class="text-[10px] font-bold text-slate-500">Minggu 2</span>
                 </div>
-                <div class="flex flex-col items-center gap-1">
-                  <div class="flex items-end gap-1.5 h-20">
-                    <div style="height: 42px;" class="w-6 bg-emerald-600 rounded-t"></div>
-                    <div style="height: 38px;" class="w-6 bg-rose-500 rounded-t"></div>
+
+                <!-- Minggu 3 -->
+                <div class="flex flex-col items-center gap-1.5">
+                  <div class="flex items-end gap-1.5 h-24">
+                    <div style="height: 52px;" class="w-6 bg-emerald-600 rounded-t"></div>
+                    <div style="height: 48px;" class="w-6 bg-rose-500 rounded-t"></div>
                   </div>
                   <span class="text-[10px] font-bold text-slate-500">Minggu 3</span>
                 </div>
-                <div class="flex flex-col items-center gap-1">
-                  <div class="flex items-end gap-1.5 h-20">
-                    <div style="height: 78px;" class="w-6 bg-emerald-600 rounded-t"></div>
-                    <div style="height: 30px;" class="w-6 bg-rose-500 rounded-t"></div>
+
+                <!-- Minggu 4 -->
+                <div class="flex flex-col items-center gap-1.5">
+                  <div class="flex items-end gap-1.5 h-24">
+                    <div style="height: 84px;" class="w-6 bg-emerald-600 rounded-t"></div>
+                    <div style="height: 24px;" class="w-6 bg-rose-500 rounded-t"></div>
                   </div>
                   <span class="text-[10px] font-bold text-slate-500">Minggu 4</span>
                 </div>
+
               </div>
             </div>
+
           </div>
 
-          <!-- Right 4 Cols: Iuran & Bank Card -->
+          <!-- RIGHT COLUMN (col-span-4) -->
           <div class="col-span-4 space-y-4">
-            <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-xs">
-              <div class="flex justify-between items-center mb-1">
+            
+            <!-- Card 1: Iuran Pengurus -->
+            <div class="bg-white rounded-xl border border-slate-200/80 p-4 shadow-xs">
+              <div class="flex justify-between items-center mb-0.5">
                 <h3 class="text-xs font-extrabold text-slate-900">Iuran Pengurus</h3>
-                <span class="text-[9px] font-extrabold px-1.5 py-0.2 rounded bg-cyan-100 text-cyan-800 uppercase">Mei 2026</span>
+                <span class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-cyan-100 text-cyan-800 uppercase">MEI 2026</span>
               </div>
-              <p class="text-[10px] text-slate-400">Target: <strong class="text-slate-700">Rp 60.000 / pengurus</strong>.</p>
+              <p class="text-[10px] text-slate-400">Target: <strong class="text-slate-700">Rp 60.000 / pengurus</strong></p>
 
+              <!-- Progress Box -->
               <div class="mt-2.5 p-3 bg-slate-50 rounded-lg border border-slate-100">
                 <div class="flex justify-between text-xs font-bold text-slate-800 mb-1">
                   <span>41 / 50 Pengurus</span>
-                  <span class="text-emerald-700">82%</span>
+                  <span class="text-emerald-700 font-extrabold">82%</span>
                 </div>
                 <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
                   <div class="bg-emerald-600 h-2 rounded-full" style="width: 82%"></div>
                 </div>
                 <div class="flex justify-between text-[10px] text-slate-500 mt-1.5">
-                  <span>Terkumpul: <strong class="text-emerald-700">Rp 2.46M</strong></span>
-                  <span>Sisa: <strong class="text-rose-600">Rp 540K</strong></span>
+                  <span>Terkumpul: <strong class="text-emerald-700 font-bold">Rp 2.46M</strong></span>
+                  <span>Sisa: <strong class="text-rose-600 font-bold">Rp 540K</strong></span>
                 </div>
               </div>
 
+              <!-- Members List (3 Items as in Screenshot) -->
               <div class="mt-2 space-y-1 text-xs">
                 <div class="py-1 flex justify-between items-center border-b border-slate-50">
-                  <div><strong class="text-slate-800 text-[11px]">Rani Pratama</strong></div>
-                  <span class="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 rounded">✓ Lunas</span>
+                  <div class="text-slate-800 font-bold text-[11px]">Rani Pratama</div>
+                  <span class="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">✓ Lunas</span>
                 </div>
                 <div class="py-1 flex justify-between items-center border-b border-slate-50">
-                  <div><strong class="text-slate-800 text-[11px]">Fakhri Al-Ghofiqi</strong></div>
-                  <span class="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 rounded">✓ Lunas</span>
+                  <div class="text-slate-800 font-bold text-[11px]">Fakhri Al-Ghofiqi</div>
+                  <span class="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">✓ Lunas</span>
                 </div>
                 <div class="py-1 flex justify-between items-center">
-                  <div><strong class="text-slate-800 text-[11px]">Bagas Raditya</strong></div>
-                  <span class="text-[9px] font-bold text-rose-700 bg-rose-50 px-1.5 rounded">Belum</span>
+                  <div class="text-slate-800 font-bold text-[11px]">Bagas Raditya</div>
+                  <span class="text-[9px] font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-100">Belum</span>
                 </div>
               </div>
             </div>
 
-            <!-- Rekening Card & QRIS -->
-            <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-xs space-y-3">
-              <div class="card-gradient-bank p-3.5 rounded-xl text-white shadow-md">
-                <div class="flex justify-between text-[10px] uppercase font-bold tracking-wider opacity-90">
-                  <span>Bank Mandiri (Giro)</span>
-                  <span>ATM</span>
-                </div>
-                <div class="text-[9px] uppercase tracking-wider opacity-75 mt-0.5">KBMDSI FILKOM UB</div>
-                <div class="mt-1.5 text-sm font-mono font-bold tracking-widest flex justify-between items-center">
-                  <span>144-00-2983741-2</span>
-                  <span class="text-[10px] bg-white/20 px-1.5 py-0.2 rounded">Salin</span>
-                </div>
+            <!-- Card 2: Bank Mandiri (Giro) Card -->
+            <div class="bg-[#0e3a20] p-4 rounded-xl text-white shadow-md">
+              <div class="flex justify-between text-[10px] uppercase font-extrabold tracking-wider text-emerald-200">
+                <span>BANK MANDIRI (GIRO)</span>
+                <span class="bg-emerald-800/80 px-1.5 py-0.2 rounded text-[9px]">ATM</span>
               </div>
-
-              <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-center flex items-center justify-between">
-                <div class="text-left">
-                  <div class="text-[11px] font-bold text-slate-800">QRIS KBMDSI</div>
-                  <div class="text-[9px] text-slate-400">BCA, GoPay, OVO, Mandiri</div>
-                </div>
-                <div class="w-16 h-16 bg-white p-1 rounded border border-slate-200 flex items-center justify-center">
-                  <svg viewBox="0 0 100 100" class="w-full h-full text-slate-900 fill-current">
-                    <rect x="5" y="5" width="25" height="25" rx="3" fill="#064e3b" />
-                    <rect x="9" y="9" width="17" height="17" fill="white" />
-                    <rect x="13" y="13" width="9" height="9" fill="#064e3b" />
-                    <rect x="70" y="5" width="25" height="25" rx="3" fill="#064e3b" />
-                    <rect x="74" y="9" width="17" height="17" fill="white" />
-                    <rect x="78" y="13" width="9" height="9" fill="#064e3b" />
-                    <rect x="5" y="70" width="25" height="25" rx="3" fill="#064e3b" />
-                    <rect x="9" y="74" width="17" height="17" fill="white" />
-                    <rect x="13" y="78" width="9" height="9" fill="#064e3b" />
-                    <rect x="36" y="36" width="28" height="28" rx="4" fill="#059669" />
-                    <text x="50" y="54" font-size="10" font-weight="bold" fill="white" text-anchor="middle" font-family="sans-serif">KBM</text>
-                  </svg>
-                </div>
+              <div class="text-[9px] uppercase tracking-wider text-emerald-100/70 mt-0.5">KBMDSI FILKOM UB</div>
+              <div class="mt-2 text-sm font-mono font-extrabold tracking-widest flex justify-between items-center">
+                <span>144-00-2983741-2</span>
+                <button class="text-[10px] bg-white/20 hover:bg-white/30 text-white px-2.5 py-1 rounded font-sans font-semibold transition-all">Salin</button>
               </div>
             </div>
+
+            <!-- Card 3: QRIS KBMDSI -->
+            <div class="p-3 bg-white border border-slate-200/80 rounded-xl shadow-xs flex items-center justify-between">
+              <div class="text-left">
+                <div class="text-xs font-extrabold text-slate-900">QRIS KBMDSI</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">BCA, GoPay, OVO, Mandiri</div>
+              </div>
+              <div class="w-14 h-14 bg-white p-1 rounded-lg border border-slate-200 flex items-center justify-center shrink-0">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-slate-900 fill-current">
+                  <rect x="5" y="5" width="25" height="25" rx="3" fill="#0e3a20" />
+                  <rect x="9" y="9" width="17" height="17" fill="white" />
+                  <rect x="13" y="13" width="9" height="9" fill="#0e3a20" />
+                  <rect x="70" y="5" width="25" height="25" rx="3" fill="#0e3a20" />
+                  <rect x="74" y="9" width="17" height="17" fill="white" />
+                  <rect x="78" y="13" width="9" height="9" fill="#0e3a20" />
+                  <rect x="5" y="70" width="25" height="25" rx="3" fill="#0e3a20" />
+                  <rect x="9" y="74" width="17" height="17" fill="white" />
+                  <rect x="13" y="78" width="9" height="9" fill="#0e3a20" />
+                  <rect x="36" y="36" width="28" height="28" rx="4" fill="#15803d" />
+                  <text x="50" y="54" font-size="10" font-weight="bold" fill="white" text-anchor="middle" font-family="sans-serif">KBM</text>
+                </svg>
+              </div>
+            </div>
+
           </div>
+
         </div>
+
       </main>
+
     </div>
+
   </div>
+
 </body>
 </html>

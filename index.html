@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1512, height=982, initial-scale=1.0">
-  <title>KEMUDI HUB | MacBook Pro 1512 x 982 - Manajemen Proker</title>
+  <title>KEMUDI HUB | Manajemen Program Kerja - Kabinet Imaginera</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
               700: '#15803d',
               800: '#166534',
               900: '#14532d',
-              dark: '#064e3b',
+              dark: '#0e3a20',
             }
           }
         }
@@ -63,7 +63,7 @@
 </head>
 <body>
 
-  <!-- Root Canvas: EXACTLY 1512px x 982px (Zero Overflow) -->
+  <!-- Root Canvas: EXACTLY 1512px x 982px -->
   <div style="width: 1512px; height: 982px;" class="flex bg-[#F8FAFC] overflow-hidden">
 
     <!-- ==================== SIDEBAR (260px x 982px) ==================== -->
@@ -71,7 +71,7 @@
       <div>
         <!-- Top Logo -->
         <div class="pb-4 border-b border-slate-100 flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-900 to-emerald-600 flex items-center justify-center text-white shadow-md shadow-emerald-950/20 font-extrabold text-sm">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#0e3a20] to-emerald-600 flex items-center justify-center text-white shadow-md font-extrabold text-sm">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
               <circle cx="12" cy="12" r="10"></circle>
               <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
@@ -82,16 +82,16 @@
               <span class="font-extrabold text-sm tracking-tight text-slate-900">KEMUDI</span>
               <span class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 tracking-wider">HUB</span>
             </div>
-            <p class="text-[10px] font-medium text-slate-400">Kabinet ImagiNesa 2026/2027</p>
+            <p class="text-[10px] font-medium text-slate-400">Kabinet Imaginera 2026/2027</p>
           </div>
         </div>
 
         <!-- Navigation Menu -->
         <div class="py-4">
-          <p class="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Navigasi Utama</p>
+          <p class="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">NAVIGASI UTAMA</p>
           <nav class="space-y-1 text-xs">
             
-            <a href="#" class="w-full flex items-center gap-3 px-3 py-2 rounded-xl font-semibold text-slate-600 hover:bg-slate-50">
+            <a href="index.html" class="w-full flex items-center gap-3 px-3 py-2 rounded-xl font-semibold text-slate-600 hover:bg-slate-50">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400">
                 <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect>
                 <rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
@@ -100,7 +100,7 @@
             </a>
 
             <!-- Active: Manajemen Proker -->
-            <a href="macbook-pro-1512x982-proker.html" class="w-full flex items-center justify-between px-3 py-2 rounded-xl font-bold bg-[#14532d] text-white shadow-sm shadow-emerald-950/20">
+            <a href="index.html" class="w-full flex items-center justify-between px-3 py-2 rounded-xl font-bold bg-[#14532d] text-white shadow-sm">
               <div class="flex items-center gap-3">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="text-white">
                   <path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path>
@@ -110,7 +110,7 @@
               <span class="text-[9px] bg-white/20 text-white font-bold px-2 py-0.5 rounded-full">12</span>
             </a>
 
-            <a href="macbook-pro-1512x982-keuangan.html" class="w-full flex items-center justify-between px-3 py-2 rounded-xl font-semibold text-slate-600 hover:bg-slate-50">
+            <a href="kas-keuangan.html" class="w-full flex items-center justify-between px-3 py-2 rounded-xl font-semibold text-slate-600 hover:bg-slate-50">
               <div class="flex items-center gap-3">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400">
                   <rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line>
@@ -170,7 +170,7 @@
             <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
           <input type="text" 
-                 placeholder="Cari program kerja, bukti kas, LPJ, PIC..." 
+                 placeholder="Cari program kerja, bukti ka" 
                  class="w-full pl-9 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-emerald-700 focus:bg-white transition-all">
         </div>
 
@@ -179,7 +179,7 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-cyan-600">
               <circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
             </svg>
-            <span>Kabinet ImagiNesa 2026/2027</span>
+            <span>Kabinet Imaginera 2026/2027</span>
           </div>
 
           <div class="relative p-1.5 text-slate-500 hover:text-slate-800 rounded-xl cursor-pointer">
@@ -209,7 +209,7 @@
         <div class="flex items-center justify-between shrink-0">
           <div>
             <div class="flex items-center gap-1.5 text-[11px] font-semibold text-slate-400 mb-0.5">
-              <span>Kabinet ImagiNesa</span>
+              <span>Kabinet Imaginera</span>
               <span>›</span>
               <span>KBMDSI FILKOM UB</span>
               <span>›</span>
@@ -237,13 +237,13 @@
           </div>
         </div>
 
-        <!-- Section 2: 4 Metric Cards Row (Compact ~95px) -->
+        <!-- Section 2: 4 Metric Cards Row (~95px) -->
         <div class="grid grid-cols-4 gap-4 shrink-0">
           
           <!-- Card 1: Total Proker -->
           <div class="bg-white rounded-xl p-3.5 border border-slate-200/80 shadow-xs flex flex-col justify-between">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Total Program Kerja</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">TOTAL PROGRAM KERJA</span>
               <div class="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
@@ -262,7 +262,7 @@
           <!-- Card 2: Sedang Berjalan -->
           <div class="bg-white rounded-xl p-3.5 border border-slate-200/80 shadow-xs flex flex-col justify-between">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Sedang Berjalan</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">SEDANG BERJALAN</span>
               <div class="w-7 h-7 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
@@ -281,7 +281,7 @@
           <!-- Card 3: Terlewat / Disahkan -->
           <div class="bg-white rounded-xl p-3.5 border border-slate-200/80 shadow-xs flex flex-col justify-between">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Terlewat / Disahkan</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">TERLEWAT / DISAHKAN</span>
               <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
@@ -298,9 +298,9 @@
           </div>
 
           <!-- Card 4: Pagu Terserap -->
-          <a href="macbook-pro-1512x982-keuangan.html" class="bg-white rounded-xl p-3.5 border border-slate-200/80 shadow-xs hover:border-emerald-300 transition-all flex flex-col justify-between group">
+          <a href="kas-keuangan.html" class="bg-white rounded-xl p-3.5 border border-slate-200/80 shadow-xs hover:border-emerald-300 transition-all flex flex-col justify-between group">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-emerald-800 transition-colors">Pagu Terserap</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-emerald-800 transition-colors">PAGU TERSERAP</span>
               <div class="w-7 h-7 rounded-lg bg-lime-50 text-lime-700 flex items-center justify-center group-hover:bg-emerald-100 transition-colors">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path>
@@ -319,7 +319,7 @@
         </div>
 
         <!-- Section 3: Banner SOP LPJ/LAK (~76px) -->
-        <div class="rounded-xl bg-gradient-to-r from-emerald-950 via-[#14532d] to-emerald-800 p-4 text-white shadow-sm flex items-center justify-between shrink-0">
+        <div class="rounded-xl bg-[#14532d] p-4 text-white shadow-sm flex items-center justify-between shrink-0">
           <div class="flex items-center gap-3.5">
             <div class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-200">
@@ -329,7 +329,7 @@
             <div>
               <div class="flex items-center gap-2">
                 <h3 class="text-xs font-extrabold text-white tracking-tight">Kepatuhan Standar Operasional Prosedur (SOP) LPJ/LAK</h3>
-                <span class="text-[9px] font-extrabold bg-emerald-400/20 text-emerald-200 border border-emerald-400/30 px-2 py-0.5 rounded-full uppercase tracking-wider">Teliti & Tepat</span>
+                <span class="text-[9px] font-extrabold bg-emerald-400/20 text-emerald-200 border border-emerald-400/30 px-2 py-0.5 rounded-full uppercase tracking-wider">TELITI & TEPAT</span>
               </div>
               <p class="text-[11px] text-emerald-100/90 mt-0.5 max-w-3xl leading-snug">
                 Sesuai ketetapan Kongres DPA KBMDSI FILKOM UB Bab IV Pasal 12, seluruh kepanitiaan pelaksana wajib melampirkan berkas fisik & digital LPJ maksimal 14 hari kalender pasca hari terakhir acara untuk menjamin pencairan termin berikutnya.
@@ -347,7 +347,7 @@
           </div>
         </div>
 
-        <!-- Section 4: Main Proker Table Card (~580px - Fits Exactly to 982px Viewport) -->
+        <!-- Section 4: Main Proker Table Card (Fits Exactly to 982px Viewport) -->
         <div class="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden flex flex-col justify-between shrink-0">
           
           <!-- Division Tabs -->
@@ -380,21 +380,21 @@
             </div>
           </div>
 
-          <!-- Table Content (6 Rows matching Figma) -->
+          <!-- Table Content (6 Rows EXACTLY as updated in Image 2) -->
           <table class="w-full text-left border-collapse text-xs">
             <thead>
               <tr class="border-b border-slate-100 text-[10px] font-bold text-slate-400 uppercase bg-slate-50/50">
-                <th class="py-2.5 px-5">Kode & Nama Program</th>
-                <th class="py-2.5 px-5">Divisi & PIC</th>
-                <th class="py-2.5 px-5">Jadwal & Tempat</th>
-                <th class="py-2.5 px-5">Progres Eksekusi</th>
-                <th class="py-2.5 px-5">Status LPJ / LAK</th>
-                <th class="py-2.5 px-5 text-right">Aksi</th>
+                <th class="py-2.5 px-5">KODE & NAMA PROGRAM</th>
+                <th class="py-2.5 px-5">DIVISI & PIC</th>
+                <th class="py-2.5 px-5">JADWAL & TEMPAT</th>
+                <th class="py-2.5 px-5">PROGRES EKSEKUSI</th>
+                <th class="py-2.5 px-5">STATUS LPJ / LAK</th>
+                <th class="py-2.5 px-5 text-right">AKSI</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-100 text-slate-700">
               
-              <!-- Row 1 -->
+              <!-- Row 1: DSI Informatics Expo (PIT - Fahri Dewantoro) -->
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-2.5 px-5">
                   <div class="flex items-center gap-2.5">
@@ -409,7 +409,7 @@
                   </div>
                 </td>
                 <td class="py-2.5 px-5">
-                  <div class="font-bold text-slate-800 text-xs">Keilmuan</div>
+                  <div class="font-bold text-slate-800 text-xs">PIT</div>
                   <div class="text-[10px] text-slate-500">Fahri Dewantoro</div>
                 </td>
                 <td class="py-2.5 px-5">
@@ -428,11 +428,11 @@
                   </span>
                 </td>
                 <td class="py-2.5 px-5 text-right">
-                  <a href="macbook-pro-1512x982-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
+                  <a href="kas-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
                 </td>
               </tr>
 
-              <!-- Row 2 -->
+              <!-- Row 2: LKMM-TD DSI 2026 (PSDM - Nadya Maharani) -->
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-2.5 px-5">
                   <div class="flex items-center gap-2.5">
@@ -466,11 +466,11 @@
                   </span>
                 </td>
                 <td class="py-2.5 px-5 text-right">
-                  <a href="macbook-pro-1512x982-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
+                  <a href="kas-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
                 </td>
               </tr>
 
-              <!-- Row 3 -->
+              <!-- Row 3: Bina Desa Digital (MEDKOMINFO - Sthefany SheanMoulia) -->
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-2.5 px-5">
                   <div class="flex items-center gap-2.5">
@@ -485,8 +485,8 @@
                   </div>
                 </td>
                 <td class="py-2.5 px-5">
-                  <div class="font-bold text-slate-800 text-xs">Pengmas</div>
-                  <div class="text-[10px] text-slate-500">Kian Syahid</div>
+                  <div class="font-bold text-slate-800 text-xs">MEDKOMINFO</div>
+                  <div class="text-[10px] text-slate-500">Sthefany SheanMoulia</div>
                 </td>
                 <td class="py-2.5 px-5">
                   <div class="font-bold text-slate-800 text-xs">15 - 28 Juli 2026</div>
@@ -504,11 +504,11 @@
                   </span>
                 </td>
                 <td class="py-2.5 px-5 text-right">
-                  <a href="macbook-pro-1512x982-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
+                  <a href="kas-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
                 </td>
               </tr>
 
-              <!-- Row 4 -->
+              <!-- Row 4: Studi Banding Eksternal (MEDKOMINFO - Herda Ariesta) -->
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-2.5 px-5">
                   <div class="flex items-center gap-2.5">
@@ -523,8 +523,8 @@
                   </div>
                 </td>
                 <td class="py-2.5 px-5">
-                  <div class="font-bold text-slate-800 text-xs">Humas</div>
-                  <div class="text-[10px] text-slate-500">Aisyah Zahra</div>
+                  <div class="font-bold text-slate-800 text-xs">MEDKOMINFO</div>
+                  <div class="text-[10px] text-slate-500">Herda Ariesta</div>
                 </td>
                 <td class="py-2.5 px-5">
                   <div class="font-bold text-slate-800 text-xs">12 - 14 Maret 2026</div>
@@ -542,11 +542,11 @@
                   </span>
                 </td>
                 <td class="py-2.5 px-5 text-right">
-                  <a href="macbook-pro-1512x982-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
+                  <a href="kas-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
                 </td>
               </tr>
 
-              <!-- Row 5 -->
+              <!-- Row 5: Survey Evaluasi Tengah Semester (ADVOKESMA - Raka Gandesta) -->
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-2.5 px-5">
                   <div class="flex items-center gap-2.5">
@@ -561,7 +561,7 @@
                   </div>
                 </td>
                 <td class="py-2.5 px-5">
-                  <div class="font-bold text-slate-800 text-xs">Litbang</div>
+                  <div class="font-bold text-slate-800 text-xs">ADVOKESMA</div>
                   <div class="text-[10px] text-slate-500">Raka Gandesta</div>
                 </td>
                 <td class="py-2.5 px-5">
@@ -580,11 +580,11 @@
                   </span>
                 </td>
                 <td class="py-2.5 px-5 text-right">
-                  <a href="macbook-pro-1512x982-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
+                  <a href="kas-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
                 </td>
               </tr>
 
-              <!-- Row 6 -->
+              <!-- Row 6: Inaugurasi & Welcoming Party (PSDM - Baskara Arya) -->
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-2.5 px-5">
                   <div class="flex items-center gap-2.5">
@@ -618,14 +618,14 @@
                   </span>
                 </td>
                 <td class="py-2.5 px-5 text-right">
-                  <a href="macbook-pro-1512x982-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
+                  <a href="kas-keuangan.html" class="p-1 text-slate-400 hover:text-emerald-700 inline-block font-bold">↗</a>
                 </td>
               </tr>
 
             </tbody>
           </table>
 
-          <!-- Pagination Footer -->
+          <!-- Pagination Footer (Fits at the very bottom edge) -->
           <div class="p-3 px-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
             <div>Menampilkan <strong class="text-slate-700">6</strong> dari <strong class="text-slate-700">12</strong> program kerja terdaftar</div>
             <div class="flex items-center gap-1">
