@@ -677,37 +677,6 @@ function handleGlobalSearch(term) {
   }
 }
 
-// --- Page Zoom Controller for Narrow / Split Screen Preview ---
-function changePageZoom(val, btn) {
-  document.body.style.zoom = val;
-  document.querySelectorAll('.zoom-btn').forEach(b => {
-    b.className = 'zoom-btn px-2.5 py-1 rounded-xl hover:bg-slate-100 text-slate-600 text-[11px] font-bold transition-all';
-  });
-  if (btn) {
-    btn.className = 'zoom-btn active-zoom px-2.5 py-1 rounded-xl bg-kemudi-800 text-white text-[11px] font-bold shadow-xs transition-all';
-  }
-  showToast(`Skala desktop disesuaikan ke ${Math.round(val * 100)}%`, 'info');
-}
-
-// Auto-fit scale if opened inside narrow Live Preview panel (< 1100px)
-window.addEventListener('load', () => {
-  if (window.innerWidth < 1100 && window.innerWidth > 320) {
-    const autoScale = Math.max(0.48, Math.min(1, Math.round((window.innerWidth / 1380) * 100) / 100));
-    document.body.style.zoom = autoScale;
-    
-    // Highlight appropriate button
-    const btn = autoScale <= 0.55 ? document.getElementById('zoom-btn-50') :
-                autoScale <= 0.72 ? document.getElementById('zoom-btn-65') :
-                document.getElementById('zoom-btn-80');
-    if (btn) {
-      document.querySelectorAll('.zoom-btn').forEach(b => {
-        b.className = 'zoom-btn px-2.5 py-1 rounded-xl hover:bg-slate-100 text-slate-600 text-[11px] font-bold transition-all';
-      });
-      btn.className = 'zoom-btn active-zoom px-2.5 py-1 rounded-xl bg-kemudi-800 text-white text-[11px] font-bold shadow-xs transition-all';
-    }
-  }
-});
-
 function goToKasForProker(name) {
   switchTab('keuangan');
   showToast(`Membuka buku kas terkait: "${name}"`, 'success');
